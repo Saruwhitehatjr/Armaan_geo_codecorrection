@@ -24,7 +24,7 @@ class Hammer
         translate(pos.x,pos.y);
         rotate(angle);
         rectMode(CENTER);
-        rect(100,100,this.width,this.height);
+        rect(0,0,this.width,this.height);
         pop();     
     }
 }

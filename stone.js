@@ -1,20 +1,20 @@
 class Stone
 {
-    constructor(c,d)
+    constructor(a,b,c,d)
     {
         var option={
             'restitution' : 0.4,
             'friction': 1.5,
             'density':1.8
         }
-        this.body=Bodies.rectangle(15,34,45,67,option);
+        this.body=Bodies.rectangle(a,b,c,d,option);
         World.add(myworld,this.body);
         
         this.width=c;
         this.height=d;
     }
 
-    display(a,b)
+    display()
     {
         var pos=this.body.position;
         var angle=this.body.angle;
@@ -23,7 +23,7 @@ class Stone
         translate(pos.x,pos.y);
         rotate(angle);
         rectMode(CENTER);
-        rect(a,b,this.width,this.height);
+        rect(0,0,this.width,this.height);
         pop();     
     }
 }

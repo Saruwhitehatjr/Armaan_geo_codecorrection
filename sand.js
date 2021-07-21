@@ -1,17 +1,18 @@
 class Sand
 {
-    constructor()
+    constructor(a,b,c)
     {
         var option={
             'restitution' : 0.6 ,
             'friction': 1,
             'density':0.6
         }
-        this.body=Bodies.circle(15,34,45,option);
+        this.body=Bodies.circle(a,b,c,option);
         World.add(myworld,this.body);
+        this.radius=c
     }
 
-    display(a,b,c)
+    display()
     {
         var pos=this.body.position;
         var angle=this.body.angle;
@@ -19,8 +20,8 @@ class Sand
         fill("blue") 
         translate(pos.x,pos.y);
         rotate(angle);
-        rectMode(CENTER);
-        circle(a,b,c);
+        ellipseMode(RADIUS);
+        circle(0,0,this.radius);
         pop();     
     }
 }
